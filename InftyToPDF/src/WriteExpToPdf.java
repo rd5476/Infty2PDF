@@ -150,7 +150,7 @@ public class WriteExpToPdf {
 					//result = this.generic_symbol_table.get(sym.label);
 					if(sym.label.length()>1)sym.label = sym.label.toLowerCase();
 					String symUnicode = this.generic_symbol_table.get(sym.label);
-					System.out.println("symbol -> "+sym.label+" - "+ symUnicode);
+			//		System.out.println("symbol -> "+sym.label+" - "+ symUnicode);
 					//String symUnicode = "#x"+Integer.toHexString(result.charAt(0) | 0x10000).substring(1) ;
 					
 					float newFontSize = GenerateAllPixellSizes.scaleFontSize(symUnicode, sym.symHeigh, baseRatio);
