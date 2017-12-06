@@ -131,6 +131,7 @@ public class WriteExpToPdf {
 				
 				float baseX = exp.objects.get(0).lowX;
 				String baseChar = exp.objects.get(0).label;
+				if(baseChar.length()>1) baseChar = baseChar.toLowerCase();
 				
 			//	float stdWidth =     unitosize.get(unicode); 
 				//baseChar = this.generic_symbol_table.get(baseChar.toLowerCase());
@@ -159,7 +160,7 @@ public class WriteExpToPdf {
 							+" -- ");
 					*/
 					contentStream.setFont(font, newFontSize);
-					contentStream.newLineAtOffset(offsetX+(sym.lowX/baseRatio), offsetY+(exp.expHeight-sym.highY)/baseRatio);
+					contentStream.newLineAtOffset(offsetX+(sym.lowX/baseRatio), offsetY+exp.expHeight+(-sym.highY)/baseRatio);
 					 result=  Jsoup.parse("&"+symUnicode).text();
 					
 					}catch(Exception e) {
